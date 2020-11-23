@@ -20,6 +20,12 @@ namespace ProductStore.Controllers
             return View(db.Products.ToList());
         }
 
+        [HttpPost]
+        public ActionResult Index(string productName)
+        {
+            return View(db.Products.Where(x => x.Name.Contains(productName)).ToList());
+        }
+
         // GET: Products/Details/5
         public ActionResult Details(int? id)
         {
