@@ -18,7 +18,7 @@
             contentType: 'application/json; charset=utf-8',
             success: function (data) {
                 //alert(JSON.stringify(data));
-                newWindow.document.write(JSON.stringify(data));
+                newWindow.document.write(JSON.stringify(data,null,4));
             },
             fail: function (jqXHR, textStatus) {
                 alert("Request failed: " + textStatus);
